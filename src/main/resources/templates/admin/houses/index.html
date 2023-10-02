@@ -42,7 +42,11 @@
                                 </div>
                             </form>
 
-                            <a href="#" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
+                            <a th:href="@{/admin/houses/register}" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
+                        </div>
+
+                        <div th:if="${successMessage}" class="alert alert-info">
+                            <span th:text="${successMessage}"></span>
                         </div>
 
                         <table class="table">
@@ -63,7 +67,7 @@
                                 <td th:text="${house.getPostalCode()}"></td>
                                 <td th:text="${house.getAddress()}"></td>
                                 <td th:text="${house.getPhoneNumber()}"></td>
-                                <td><a href="#">詳細</a></td>
+                                <td><a th:href="@{/admin/houses/__${house.getId()}__}">詳細</a></td>
                             </tr>
                             </tbody>
                         </table>
