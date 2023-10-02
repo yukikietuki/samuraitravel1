@@ -70,6 +70,8 @@ public class HouseService {
         houseRepository.save(house);
     }
 
+
+
     // UUIDを使って生成したファイル名を返す
     public String generateNewFileName(String fileName) {
         String[] fileNames = fileName.split("\\.");
